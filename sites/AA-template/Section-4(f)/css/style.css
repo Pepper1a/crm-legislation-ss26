@@ -14,15 +14,19 @@ html {
   min-height: 100%;
 }
 body {
+  /* Margin bottom by footer height */
   margin-bottom: 60px;
-  width: 75%;
-  background-color: #3e4241;
+  width: 100%;
+  background-color: #1a1a1a;
   color: #f2f2f2;
+
 }
+
 .footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+  /* Set the fixed height of the footer here */
   height: 60px;
   background-color: #3e4241;
 }
@@ -31,6 +35,7 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
+  /* Set the fixed height of the footer here */
   height: 60px;
   background-color: #3e4241;
 }
@@ -44,6 +49,10 @@ body {
 		padding-top: 50px;
 		margin-left: 15px;
 		margin-right: 15px;
+		color: #3e4241;
+		line-height: 1.42857143;
+		letter-spacing: normal;
+		font-weight: normal;
 	}
 }
 @media (min-width: 768px) {
@@ -53,6 +62,10 @@ body {
 		margin: 0 auto;
 		border-left: 15px;
 		border-right: 15px;
+		color: #3e4241;
+		line-height: 1.42857143;
+		letter-spacing: normal;
+		font-weight: normal;
 	};
 }
 @media (min-width: 992px) {
@@ -62,6 +75,10 @@ body {
 		margin: 0 auto;
 		border-left: 15px;
 		border-right: 15px;
+		color: #3e4241;
+		line-height: 1.42857143;
+		letter-spacing: normal;
+		font-weight: normal;
 	};
 }
 @media (min-width: 1200px) {
@@ -71,6 +88,10 @@ body {
 		margin: 0 auto;
 		border-left: 15px;
 		border-right: 15px;
+		color: #3e4241;
+		line-height: 1.42857143;
+		letter-spacing: normal;
+		font-weight: normal;
 	};
 }
 .popover {
@@ -104,8 +125,8 @@ code {
 
 #about p,h1,h2,h3,h4,h5 {
 	padding-left: 15px;
-	padding-right: 15px;
-	color: #3e4241;
+	padding-right: 100px;
+	color: #6cb1a0;
 	line-height: 1.42857143;
 	letter-spacing: normal;
 	font-weight: normal;
@@ -116,7 +137,6 @@ code {
 	letter-spacing: normal;
 	font-weight: normal;
 }
-
 /* MAP CSS
 -------------------------------------------------- */
 
@@ -136,88 +156,6 @@ code {
     bottom: 60px;
 }
 
-/* TIME SLIDER CSS
--------------------------------------------------- */
-
-#time-slider-container {
-    position: absolute;
-    bottom: 70px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 8px 15px;
-    border-radius: 4px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-    min-width: 250px;
-    text-align: center;
-}
-
-#time-slider-container label {
-    display: inline;
-    margin-right: 8px;
-    font-weight: 600;
-    color: #333;
-    font-size: 12px;
-}
-
-#time-slider {
-    width: 150px;
-    margin: 0 8px;
-    cursor: pointer;
-    vertical-align: middle;
-    display: inline-block;
-}
-
-#time-slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 14px;
-    height: 14px;
-    background: #36A184;
-    cursor: pointer;
-    border-radius: 50%;
-}
-
-#time-slider::-moz-range-thumb {
-    width: 14px;
-    height: 14px;
-    background: #3e4241;
-    cursor: pointer;
-    border-radius: 50%;
-    border: none;
-}
-
-#time-display {
-    display: inline;
-    color: #3e4241;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-@media (max-width: 767px) {
-    #time-slider-container {
-        bottom: 65px;
-        left: 10px;
-        right: 10px;
-        transform: none;
-        min-width: auto;
-        padding: 6px 10px;
-    }
-    
-    #time-slider {
-        width: 120px;
-    }
-    
-    #time-slider-container label {
-        font-size: 11px;
-    }
-    
-    #time-display {
-        font-size: 11px;
-    }
-}
-
 
 
 /* DETAIL page CSS
@@ -225,11 +163,8 @@ code {
 
 #detail {
     padding: 50px;
-	line-height: 1.1;
-}
-
-#detail figcaption {
-	padding-top: 4px;
+	background-color: #ffffff;
+	color: #000000;
 }
 
 #detail a {
@@ -237,15 +172,18 @@ code {
 	text-decoration: none;
 }
 
-#detail a:hover {
-    color: #6cb1a0;
-    text-decoration: none;
+#detail figcaption {
+	padding-top: 4px;
 }
 
+#detail a:hover {
+    color: #6cb1a0;
+    text-decoration: underline;
+}
 
 a.back {
     background-color: #3e4241;
-    color: #fff;
+    color: #FFF;
     margin-top: 150px;
     padding: 20px;
     width: 150px;
@@ -260,6 +198,9 @@ a.back:hover {
 div.back {
     margin: 50px 0;
 }
+
+
+
 
 
 /* BOOTSTRAP CSS
@@ -398,26 +339,26 @@ div.back {
 .btn-warning {
   background-image: -webkit-linear-gradient(top, #f0ad4e 0%, #eb9316 100%);
   background-image:      -o-linear-gradient(top, #f0ad4e 0%, #eb9316 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f0ad4e), to(#6cb1a0));
-  background-image:         linear-gradient(to bottom, #f0ad4e 0%, #6cb1a0 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff0ad4e', endColorstr='#ff6cb1a0', GradientType=0);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f0ad4e), to(#eb9316));
+  background-image:         linear-gradient(to bottom, #f0ad4e 0%, #eb9316 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff0ad4e', endColorstr='#ffeb9316', GradientType=0);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   background-repeat: repeat-x;
-  border-color: #6cb1a0;
+  border-color: #e38d13;
 }
 .btn-warning:hover,
 .btn-warning:focus {
-  background-color: #6cb1a0;
+  background-color: #eb9316;
   background-position: 0 -15px;
 }
 .btn-warning:active,
 .btn-warning.active {
-  background-color: #6cb1a0;
-  border-color: #6cb1a0;
+  background-color: #eb9316;
+  border-color: #e38d13;
 }
 .btn-warning:disabled,
 .btn-warning[disabled] {
-  background-color: #6cb1a0;
+  background-color: #eb9316;
   background-image: none;
 }
 .btn-danger {
